@@ -1,52 +1,45 @@
-public class SpiderPowers {
-    public void displaySpiderSense() {
-        System.out.println("Spider-Sense: Danger detection");
-    }
+public class HeroBase {
+public void displayInfo() {
+System.out.println("Basic Hero Information");
+}
 }
 
-public class PeterParker extends SpiderPowers {
-    public void displayAbilities() {
-        System.out.println("Primary: Web Shooter");
-        System.out.println("Secondary: Web Swinging");
-        System.out.println("E: Spider Grip");
-        System.out.println("Q: Spectacular Spin");
-    }
+public class DamageHero extends HeroBase {
+public void displayAbility() {
+System.out.println("Ultimate: Final Judgment");
+System.out.println("Passive: Critical Strike");
+}
 }
 
-public class MilesMorales extends SpiderPowers {
-    public void displayAbilities() {
-        System.out.println("Primary: Venom Strike");
-        System.out.println("Secondary: Web Shooter");
-        System.out.println("E: Camouflage");
-        System.out.println("Q: Mega Venom Blast");
-    }
+public class TankHero extends HeroBase {
+public void displayAbility() {
+System.out.println("Ultimate: Impenetrable Shield");
+System.out.println("Passive: Regeneration");
+}
 }
 
-public class GwenStacy extends SpiderPowers {
-    public void displayAbilities() {
-        System.out.println("Primary: Ballet Combat");
-        System.out.println("Secondary: Web Shooter");
-        System.out.println("E: Ghost-Spider");
-        System.out.println("Q: Dimensional Leap");
-    }
+public class SupportHero extends HeroBase {
+public void displayAbility() {
+System.out.println("Ultimate: Mass Heal");
+System.out.println("Passive: Mana Restoration");
+}
 }
 
-public class SpiderMain {
-    public static void main(String[] args) {
-        System.out.println("Peter Parker");
-        PeterParker peter = new PeterParker();
-        peter.displaySpiderSense();
-        peter.displayAbilities();
-        
-        System.out.println("Miles Morales");
-        MilesMorales miles = new MilesMorales();
-        miles.displaySpiderSense();
-        miles.displayAbilities();
-        
-        System.out.println("Gwen Stacy");
-        GwenStacy gwen = new GwenStacy();
-        gwen.displaySpiderSense();
-        gwen.displayAbilities();
-    }
-}
+public class HeroMain {
+public static void main(String[] args) {
+System.out.println("Damage Hero");
+DamageHero damage = new DamageHero();
+damage.displayInfo();
+damage.displayAbility();
 
+System.out.println("Tank Hero");
+TankHero tank = new TankHero();
+tank.displayInfo();
+tank.displayAbility();
+
+System.out.println("Support Hero");
+SupportHero support = new SupportHero();
+support.displayInfo();
+support.displayAbility();
+}
+}
